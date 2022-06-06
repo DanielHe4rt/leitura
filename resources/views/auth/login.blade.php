@@ -8,23 +8,32 @@
                 <div class="card-body">
                     <div class="row justify-content-center">
                         <div class="col-12 col-md-9">
+
+                            @if($errors->any())
+                                <div class="alert alert-danger">
+                                    <ul>
+                                        @foreach($errors->all() as $error)
+                                            <li>{{ $error }}</li>
+                                        @endforeach
+                                    </ul>
+                                </div>
+                            @endif
                             <p class="card-text">
                                 Entre com as suas credenciais
                             </p>
-                            <form method="POST" action="{{ '??' }}">
+                            <form method="POST" action="{{ route('auth.post-login') }}">
                                 @csrf
                                 <div class="form-group mt-2">
-                                    <label for="exampleInputEmail1">E-mail</label>
-                                    <input type="email" class="form-control" id="exampleInputEmail1"
-                                           aria-describedby="emailHelp" placeholder="Enter email">
+                                    <label for="email">E-mail</label>
+                                    <input type="email" class="form-control" id="email" name="email"
+                                           aria-describedby="emailHelp" placeholder="seu@email.com">
                                 </div>
                                 <div class="form-group mt-2">
-                                    <label for="exampleInputPassword1">Password</label>
-                                    <input type="password" class="form-control" id="exampleInputPassword1"
-                                           placeholder="Password">
+                                    <label for="password">Senha</label>
+                                    <input type="password" class="form-control" id="password" name="password">
                                 </div>
                                 <div class="d-grid gap-2">
-                                    <button class="btn btn-primary mt-2 ">
+                                    <button type="submit" class="btn btn-primary mt-2 ">
                                         Entrar
                                     </button>
                                 </div>

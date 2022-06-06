@@ -15,3 +15,5 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', [AuthController::class, 'viewLogin']);
+Route::post('/login', [AuthController::class, 'postLogin'])->name('auth.post-login');
+
