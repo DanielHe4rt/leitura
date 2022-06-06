@@ -1,6 +1,8 @@
 <?php
 
+use App\Http\Controllers\Appointment\AppointmentsController;
 use App\Http\Controllers\Auth\AuthController;
+use App\Http\Controllers\DashboardController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -17,3 +19,9 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', [AuthController::class, 'viewLogin']);
 Route::post('/login', [AuthController::class, 'postLogin'])->name('auth.post-login');
 
+
+Route::middleware('auth')->group(function () {
+    Route::get('/dashboard', [DashboardController::class, 'viewDashboard'])->name('dashboard');
+
+    Route::get('/minhas-appointments', [AppointmentsController::class, 'viewMyAppointments'])->name('appointments.my-appointments');
+});
