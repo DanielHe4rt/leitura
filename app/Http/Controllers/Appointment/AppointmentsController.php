@@ -11,4 +11,29 @@ class AppointmentsController extends Controller
     {
         return view('appointments.list');
     }
+
+    public function viewNewAppointment(): View
+    {
+        return view('appointments.new');
+    }
+
+    public function viewAppointmentOptions(): View
+    {
+        return view('appointments.options');
+    }
+
+    public function viewNewExclusiveAppointment(): View
+    {
+        return view('appointments.new-exclusive');
+    }
+
+    public function viewNewMeeting(): View
+    {
+        return view('appointments.new-meeting');
+    }
+
+    public function viewNewModel(): View
+    {
+        return view('appointments.new-model');
+    }
 }
