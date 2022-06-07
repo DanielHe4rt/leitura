@@ -1,4 +1,4 @@
-@extends('layouts.app')
+@extends('layouts.app2')
 
 @section('content')
     <div class="row justify-content-center mt-5">
@@ -11,10 +11,14 @@
                             <p class="text-center">Olá {{ auth()->user()->name }}</p>
                             <hr>
                             <div class="d-grid gap-2">
-                                <a href="{{ route('appointments.new-appointment') }}" class="btn btn-primary btn-lg m-2">Solicitar Orçamento</a>
-                                <a href="{{ route('appointments.new-model') }}" class="btn btn-primary btn-lg m-2">Solicitar Modelo</a>
-                                <a href="{{ route('appointments.new-meeting') }}" class="btn btn-primary btn-lg m-2">Agendar Reunião</a>
-                                <a href="{{ route('appointments.new-exclusive') }}" class="btn btn-primary btn-lg m-2">Projeto Exclusivo</a>
+                                <a href="{{ route('appointments.new-appointment') }}"
+                                   class="btn btn-primary btn-lg m-2">Solicitar Orçamento</a>
+                                <a href="{{ route('appointments.new-model') }}" class="btn btn-primary btn-lg m-2">Solicitar
+                                    Modelo</a>
+                                <a href="{{ route('appointments.new-meeting') }}" class="btn btn-primary btn-lg m-2">Agendar
+                                    Reunião</a>
+                                <a href="{{ route('appointments.new-exclusive') }}" class="btn btn-primary btn-lg m-2">Projeto
+                                    Exclusivo</a>
                             </div>
                             <hr>
                             <div class="d-grid gap-2">

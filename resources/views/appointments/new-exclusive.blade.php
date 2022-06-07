@@ -1,4 +1,4 @@
-@extends('layouts.app')
+@extends('layouts.app2')
 
 @section('content')
     <div class="row justify-content-center mt-5">
@@ -6,7 +6,8 @@
             <div class="card">
                 <div class="card-header bg-primary text-white text-center">SOLICITAÇÃO DE PROJETO EXCLUSIVO</div>
                 <div class="card-body">
-                    <div class="card-text text-center">Preencha o formulário abaixo para orçar um projeto exclusivo</div>
+                    <div class="card-text text-center">Preencha o formulário abaixo para orçar um projeto exclusivo
+                    </div>
                     <hr>
                     <form action="">
                         <div class="row mb-2">
