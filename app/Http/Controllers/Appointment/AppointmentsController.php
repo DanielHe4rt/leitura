@@ -22,10 +22,6 @@ class AppointmentsController extends Controller
         return view('appointments.options');
     }
 
-    public function viewNewExclusiveAppointment(): View
-    {
-        return view('appointments.new-exclusive');
-    }
 
     public function viewNewMeeting(): View
     {
